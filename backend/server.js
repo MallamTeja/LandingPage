@@ -28,7 +28,7 @@ app.get('/test', (req, res) => {
 
 // Default route
 app.get('/', (req, res) => {
-    res.send('Server is running. Use /api endpoints to interact with the application.');
+    res.sendFile(path.join(__dirname, '../frontend/landing.html'));
 });
 
 // Handle 404 errors

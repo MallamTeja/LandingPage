@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To Clarity - Landing Page</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-blue-900 text-white p-6">
+        <h1 class="text-3xl font-bold">To Clarity</h1>
+        <nav class="mt-2">
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:underline">Home</a></li>
+                <li><a href="#about" class="hover:underline">About</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6 space-y-16">
+        <!-- Welcome Section -->
+        <section id="home" class="text-center animate-fadeIn">
+            <h2 class="text-5xl font-extrabold mb-4">Welcome to Clarity</h2>
+            <p class="text-xl text-gray-700">Your journey to clarity begins here.</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white p-8 rounded-lg shadow-md animate-fadeIn delay-200">
+            <p class="text-center text-lg max-w-3xl mx-auto">
+                To Clarity is your one-stop platform to help students and individuals find clarity in their educational journey.
+            </p>
+        </section>
+
+        <!-- Form Section -->
+        <section id="contact" class="space-y-6">
+            <p class="text-center text-lg mb-6 animate-fadeIn delay-400">
+                Please fill out the form below to get started.
+            </p>
+            <form id="clarityForm" class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md animate-fadeIn delay-600" action="#" method="POST">
+                <h3 class="text-xl font-semibold mb-4">Get Started</h3>
+                <label for="name" class="block mb-1 font-medium">Enter Your Name</label>
+                <input id="name" type="text" name="name" placeholder="John Doe" class="w-full mb-4 p-2 border border-gray-300 rounded" required />
+                
+                <label for="email" class="block mb-1 font-medium">Enter Your Email</label>
+                <input id="email" type="email" name="email" placeholder="email@example.com" class="w-full mb-4 p-2 border border-gray-300 rounded" required />
+                
+                <label for="collegeLevel" class="block mb-1 font-medium">Select Your College Level</label>
+                <select id="collegeLevel" name="collegeLevel" class="w-full mb-4 p-2 border border-gray-300 rounded" required>
+                    <option value="" disabled selected>Select an Option</option>
+                    <option value="Inter/Diploma">Inter/Diploma</option>
+                    <option value="B.Tech/Degree">B.Tech/Degree</option>
+                    <option value="MBA/M.Tech">MBA/M.Tech</option>
+                    <option value="Coaching Institutions">Coaching Institutions</option>
+                </select>
+
+                <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800 transition">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-6 mt-12">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+            <div class="flex space-x-4 mb-4 md:mb-0">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition p-2">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-pink-500 transition p-2">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="mailto:contact@toclarity.com" class="hover:text-yellow-400 transition p-2">
+                    <i class="fas fa-envelope fa-lg"></i>
+                </a>
+            </div>
+            <p class="text-sm text-center md:text-left">&copy; 2023 To Clarity. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('clarityForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const collegeLevel = document.getElementById('collegeLevel').value;
+
+            if (!name) {
+                alert('Please enter your name.');
+                return;
+            }
+            if (!email) {
+                alert('Please enter your email.');
+                return;
+            }
+            if (!collegeLevel) {
+                alert('Please select your college level.');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/records', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, category: collegeLevel })
+                });
+
+                if (response.ok) {
+                    alert('Form submitted successfully!');
+                    this.reset();
+                } else {
+                    const errorData = await response.json();
+                    alert('Error submitting form: ' + errorData.message);
+                }
+            } catch (error) {
+                alert('Error submitting form: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>
