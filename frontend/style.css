@@ -14,9 +14,30 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #a67b5b; /* warm beige/brown */
+    color: #2c3e50; /* muted blue/dark */
     padding: 1rem 2rem;
+}
+
+header h1 {
+    color: #ffffff; /* white */
+}
+
+nav ul li a {
+    color: #2c3e50; /* muted blue/dark */
+}
+
+nav ul li a:hover {
+    color: #d9a066; /* lighter warm shade */
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #a67b5b; /* warm beige/brown */
+    color: #2c3e50; /* muted blue/dark */
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
 }
 
 header h1 {
