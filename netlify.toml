@@ -1,0 +1,9 @@
+[build]
+  publish = "frontend"
+  command = ""
+
+# Redirects can be added here if needed
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200

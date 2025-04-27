@@ -1,6 +1,6 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Application initialized');
+    // console.log('Application initialized');
     
     // Example function to fetch data from backend
     async function fetchDataFromBackend() {
@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainSection = document.querySelector('main');
     if (mainSection) {
         mainSection.addEventListener('click', (event) => {
-            console.log('Main section clicked:', event.target);
+            // console.log('Main section clicked:', event.target);
         });
     }
 
     // Initialize the application
     function init() {
-        console.log('Initializing application components...');
+        // console.log('Initializing application components...');
         // Add your initialization code here
     }
 
