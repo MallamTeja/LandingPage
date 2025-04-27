@@ -3,9 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log('Application initialized');
     
     // Example function to fetch data from backend
+    // Set the backend base URL here. Update this to your deployed backend URL.
+    const BACKEND_BASE_URL = 'http://localhost:3000';
+
     async function fetchDataFromBackend() {
         try {
-            const response = await fetch('http://localhost:3000/api/data');
+            const response = await fetch(`${BACKEND_BASE_URL}/api/data`);
             const data = await response.json();
             return data;
         } catch (error) {
