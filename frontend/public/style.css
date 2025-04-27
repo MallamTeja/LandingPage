@@ -128,14 +128,15 @@ footer {
 .college-card {
     border-radius: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0 4px 8px 0 rgba(44, 62, 80, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(173, 216, 230, 0.8); /* more intense light blue shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: white;
+    animation: fadeSlideUp 0.8s ease forwards;
 }
 
 .college-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px 0 rgba(44, 62, 80, 0.6);
+    box-shadow: 0 8px 16px 0 rgba(173, 216, 230, 1); /* strongest light blue shadow */
 }
 
 /* Background image for login and signup pages */
@@ -161,4 +162,105 @@ footer {
 
 .fade-slide-up {
     animation: fadeSlideUp 0.8s ease forwards;
+}
+
+/* Upward motion effect */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 1s ease-out;
+}
+
+/* Remove previous flexbox layout for sticky footer */
+html, body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: block;
+  min-height: auto;
+}
+
+/* Remove flex-grow from main */
+main {
+  flex-grow: 0;
+  padding-bottom: 60px; /* space for footer height */
+}
+
+/* Sticky footer styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a202c; /* dark background (Tailwind's blue-900) */
+  color: white;
+  padding: 10px 20px;
+  height: 40px;
+  z-index: 1000;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+footer p {
+  margin: 0;
+  text-align: left;
+  flex: 1;
+}
+
+footer > div:first-child {
+  order: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+}
+
+footer > div:first-child a {
+  padding: 4px;
+  font-size: 1rem;
+}
+
+/* Footer normal state */
+footer.normal {
+  height: 60px;
+  padding: 20px 0;
+  font-size: 1rem;
+}
+
+footer.normal .text-white {
+  font-size: 1rem;
+}
+
+footer.normal a i {
+  font-size: 1.25rem; /* fa-lg */
+  padding: 8px;
+}
+
+/* Footer shrunk state */
+footer.shrunk {
+  height: 40px;
+  padding: 8px 0;
+  font-size: 0.75rem;
+}
+
+footer.shrunk .text-white {
+  font-size: 0.75rem;
+}
+
+footer.shrunk a i {
+  font-size: 1rem; /* smaller icons */
+  padding: 4px;
 }

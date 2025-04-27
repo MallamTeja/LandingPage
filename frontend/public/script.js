@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         errorMessageElem.style.fontWeight = 'bold';
         landingSubmitBtn.parentNode.insertBefore(errorMessageElem, landingSubmitBtn.nextSibling);
 
-clarityForm.addEventListener('submit', async (event) => {
+        clarityForm.addEventListener('submit', async (event) => {
             console.log("Landing form submitted");
             event.preventDefault();
 
