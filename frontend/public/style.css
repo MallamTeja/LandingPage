@@ -123,3 +123,42 @@ footer {
     animation: fadeIn 1s ease-in forwards;
 }
 */
+
+/* Custom college card shadow and animation */
+.college-card {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(44, 62, 80, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+}
+
+.college-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(44, 62, 80, 0.6);
+}
+
+/* Background image for login and signup pages */
+.bg-login-signup {
+    background-image: url('./images/sign%20bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Smooth fade and slide up animation for signup page */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-slide-up {
+    animation: fadeSlideUp 0.8s ease forwards;
+}
