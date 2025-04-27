@@ -16,15 +16,18 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-gray-50 text-gray-800">
-    <header class="bg-blue-900 text-white p-6 flex justify-between items-center">
-        <h1 class="text-3xl font-bold">ToClarity</h1>
+    <header class="bg-blue-900 text-white p-6 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+        <h1 class="flex items-center text-6xl font-bold space-x-3">
+            <i class="fas fa-graduation-cap text-yellow-400"></i>
+            <span>ToClarity</span>
+        </h1>
         <div class="space-x-4">
             <a href="login.html" class="bg-white text-blue-900 font-semibold py-2 px-4 rounded hover:bg-gray-200 transition">Login</a>
             <a href="signup.html" class="bg-white text-blue-900 font-semibold py-2 px-4 rounded hover:bg-gray-200 transition">Sign Up</a>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto p-6 space-y-16">
+    <main class="max-w-5xl mx-auto p-6 space-y-16 pt-28">
         <!-- Welcome Section -->
         <section id="home" class="text-center animate-fadeIn">
             <h2 class="text-5xl font-extrabold mb-4">Welcome ToClarity</h2>
@@ -43,55 +46,53 @@
 
         <!-- About Section -->
         <section id="about" class="bg-white p-8 rounded-lg shadow-md animate-fadeIn delay-200">
-            <h2 class="text-2xl font-bold text-center mb-6">Explore Categories</h2>
-            <div class="max-w-5xl mx-auto">
-                <div class="flex justify-center space-x-6 border-b border-gray-300 mb-6" role="tablist" aria-label="Categories">
-                    <button type="button" class="py-2 px-4 text-blue-600 border-b-2 border-blue-600 font-semibold focus:outline-none" role="tab" aria-selected="true" aria-controls="tab-inter" id="tab-inter-btn">Inter</button>
-                    <button type="button" class="py-2 px-4 text-gray-600 hover:text-blue-600 focus:outline-none" role="tab" aria-selected="false" aria-controls="tab-btech" id="tab-btech-btn">B.Tech</button>
-                    <button type="button" class="py-2 px-4 text-gray-600 hover:text-blue-600 focus:outline-none" role="tab" aria-selected="false" aria-controls="tab-mba" id="tab-mba-btn">MBA</button>
-                    <button type="button" class="py-2 px-4 text-gray-600 hover:text-blue-600 focus:outline-none" role="tab" aria-selected="false" aria-controls="tab-coaching" id="tab-coaching-btn">Coaching Centres</button>
-                </div>
+<h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Explore Categories</h2>
+<div class="max-w-5xl mx-auto">
+    <div class="flex justify-center space-x-6 border-b border-gray-300 mb-6" role="tablist" aria-label="Categories">
+        <button type="button" class="py-3 px-6 text-gray-800 border-b-2 border-blue-600 font-bold focus:outline-none text-2xl" role="tab" aria-selected="true" aria-controls="tab-inter" id="tab-inter-btn">Inter</button>
+        <button type="button" class="py-3 px-6 text-gray-800 hover:text-gray-800 focus:outline-none font-bold text-2xl" role="tab" aria-selected="false" aria-controls="tab-btech" id="tab-btech-btn">B.Tech</button>
+    </div>
                 <div id="tab-content" class="text-gray-800">
                     <div id="tab-inter" role="tabpanel" aria-labelledby="tab-inter-btn" class="">
-                        <h3 class="text-xl font-semibold mb-6">Inter</h3>
+                        <h3 class="text-3xl font-bold mb-6">Inter</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Loyola Academy Junior College</h4>
+<h4 class="text-base font-semibold mb-1">Loyola Academy Junior College</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Alwal</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> MPC, BiPC, MEC, CEC</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> A premier institution known for academic excellence combined with holistic student development.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://loyolaacademyjuniorcollege.ac.in" target="_blank" class="text-blue-600 hover:underline text-[10px]">loyolaacademyjuniorcollege.ac.in</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Sri Chaitanya Junior College</h4>
+<h4 class="text-base font-semibold mb-1">Sri Chaitanya Junior College</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Madhapur</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> MPC, BiPC, MEC, CEC</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Renowned for producing top ranks in IIT-JEE, NEET, and EAMCET through structured academic programs.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://srichaitanyacollege.net" target="_blank" class="text-blue-600 hover:underline text-[10px]">srichaitanyacollege.net</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Narayana Junior College</h4>
+<h4 class="text-base font-semibold mb-1">Narayana Junior College</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Madhapur</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> MPC, BiPC, MEC, CEC</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Well-known for integrated coaching and consistent success in national-level entrance examinations.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://narayanagroup.com" target="_blank" class="text-blue-600 hover:underline text-[10px]">narayanagroup.com</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">MS Junior College</h4>
+<h4 class="text-base font-semibold mb-1">MS Junior College</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Himayat Nagar</p>
 <p class="text-[10px]"><strong>Branches Offered:</strong> MPC, BiPC, MEC, CEC, HEC</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Focuses on academic excellence along with ethical and career-oriented education.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://msjcedu.com" target="_blank" class="text-blue-600 hover:underline text-[10px]">msjcedu.com</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Excellencia Junior College</h4>
+<h4 class="text-base font-semibold mb-1">Excellencia Junior College</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Shamirpet</p>
 <p class="text-[10px]"><strong>Branches Offered:</strong> MPC, BiPC</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Specialized in intensive coaching for IIT-JEE, NEET, and EAMCET with a student-centric approach.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://excellencia.co.in" target="_blank" class="text-blue-600 hover:underline text-[10px]">excellencia.co.in</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Gyanville Academy</h4>
+<h4 class="text-base font-semibold mb-1">Gyanville Academy</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Hyderabad</p>
 <p class="text-[10px]"><strong>Branches Offered:</strong> MPC, MEC</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Offers integrated coaching for IIT-JEE, CLAT, and IPMAT with strong career guidance support.</p>
@@ -100,91 +101,91 @@
                         </div>
                     </div>
                     <div id="tab-btech" role="tabpanel" aria-labelledby="tab-btech-btn" class="">
-                        <h3 class="text-xl font-semibold mb-6">B.Tech</h3>
+                        <h3 class="text-3xl font-bold mb-6">B.Tech</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Chaitanya Bharathi Institute of Technology (CBIT)</h4>
+<h4 class="text-sm font-bold mb-1">Chaitanya Bharathi Institute of Technology (CBIT)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Gandipet</p>
 <p class="text-[10px]"><strong>Branches Offered:</strong> CSE, AIML, AI, ECE</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Known for its strong academic curriculum and excellent placement records.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://cbit.ac.in" target="_blank" class="text-blue-600 hover:underline text-[10px]">cbit.ac.in</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Nextwave School of Engineering</h4>
+<h4 class="text-sm font-bold mb-1">Nextwave School of Engineering</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Ameerpet</p>
 <p class="text-[10px]"><strong>Branches Offered:</strong> CSE, AIML</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Known for its innovative teaching methods, tech-driven curriculum, and a focus on industry-ready skills in software engineering.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://nextwaveedu.com" target="_blank" class="text-blue-600 hover:underline text-[10px]">nextwaveedu.com</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Vardhaman College of Engineering (VCE)</h4>
+<h4 class="text-sm font-bold mb-1">Vardhaman College of Engineering (VCE)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Shamshabad</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> CSE, AI, ECE</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Offers a comprehensive range of engineering programs with a focus on research and development.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://vardhaman.org" target="_blank" class="text-blue-600 hover:underline text-[10px]">vardhaman.org</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Mahatma Gandhi Institute of Technology (MGIT)</h4>
+<h4 class="text-sm font-bold mb-1">Mahatma Gandhi Institute of Technology (MGIT)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Gandipet</p>
 <p class="text-[10px]"><strong>Branches Offered:</strong> CSE, AIML, IT</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Provides quality education with a focus on practical and industry-oriented training.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://mgit.ac.in" target="_blank" class="text-blue-600 hover:underline text-[10px]">mgit.ac.in</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">BV Raju Institute of Technology (BVRIT)</h4>
+<h4 class="text-sm font-bold mb-1">BV Raju Institute of Technology (BVRIT)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Narsapur</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> CSE, AI, ECE</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Known for its strong academic foundation and focus on research, innovation, and placement opportunities.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://bvrit.ac.in" target="_blank" class="text-blue-600 hover:underline text-[10px]">bvrit.ac.in</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Malla Reddy University</h4>
+<h4 class="text-sm font-bold mb-1">Malla Reddy University</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Maisammaguda, Kompally</p>
 <p class="text-[10px]"><strong>Branches Offered:</strong> CSE, AIML, Data Science</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> A highly regarded university known for its academic excellence, research initiatives, and strong industry collaborations.</p>
 <span class="text-black text-[10px]">official web :</span> <a href="https://mrug.edu.in" target="_blank" class="text-blue-600 hover:underline text-[10px]">mrug.edu.in</a>
                             </div>
                         </div>
-<div id="tab-mba" role="tabpanel" aria-labelledby="tab-mba-btn" class="" style="display:none">
-                        <h3 class="text-xl font-semibold mb-6">MBA</h3>
+                    <div id="tab-mba" role="tabpanel" aria-labelledby="tab-mba-btn" class="" style="display:none">
+                        <h3 class="text-3xl font-bold mb-6">MBA</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Indian School of Business (ISB)</h4>
+<h4 class="text-sm font-semibold mb-1">Indian School of Business (ISB)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Gachibowli</p>
                                 <p class="text-[10px]"><strong>Branches Offered:</strong> Post Graduate Program in Management (PGPM), Executive MBA</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> ISB is a globally renowned business school offering an excellent curriculum and top-tier placements.</p>
                                 <span class="text-black text-[10px]">official web :</span> <a href="https://isb.edu" target="_blank" class="text-blue-600 hover:underline text-[10px]">isb.edu</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">ICFAI Business School (IBS)</h4>
+<h4 class="text-sm font-semibold mb-1">ICFAI Business School (IBS)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Donthanapally, Shankarpally</p>
                                 <p class="text-[10px]"><strong>Branches Offered:</strong> MBA in Finance, Marketing, HR, and Operations, Executive MBA</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Known for its rigorous academics and strong industry linkages that offer good placement opportunities.</p>
                                 <span class="text-black text-[10px]">official web :</span> <a href="https://ibsindia.org" target="_blank" class="text-blue-600 hover:underline text-[10px]">ibsindia.org</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Hyderabad Business School (HBS)</h4>
+<h4 class="text-sm font-semibold mb-1">Hyderabad Business School (HBS)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Shamirpet</p>
                                 <p class="text-[10px]"><strong>Branches Offered:</strong> MBA in Marketing, Finance, HR, Operations, and IT</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> HBS offers a variety of specializations and focuses on the overall development of leadership skills.</p>
                                 <span class="text-black text-[10px]">official web :</span> <a href="https://hsb.edu" target="_blank" class="text-blue-600 hover:underline text-[10px]">hsb.edu</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Osmania University Business School (OUBS)</h4>
+<h4 class="text-sm font-semibold mb-1">Osmania University Business School (OUBS)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Osmania University Campus</p>
                                 <p class="text-[10px]"><strong>Branches Offered:</strong> MBA in General Management, Finance, Marketing, HR</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> A government-run institution with strong academic infrastructure and a rich legacy in management education.</p>
                                 <span class="text-black text-[10px]">official web :</span> <a href="https://oubs.edu.in" target="_blank" class="text-blue-600 hover:underline text-[10px]">oubs.edu.in</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Department of Business Management, University of Hyderabad (UOH)</h4>
+<h4 class="text-sm font-semibold mb-1">Department of Business Management, University of Hyderabad (UOH)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Gachibowli</p>
                                 <p class="text-[10px]"><strong>Branches Offered:</strong> MBA in Finance, Marketing, HR, Operations, Business Analytics</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Offers a world-class education in management and is known for a robust research-oriented approach.</p>
                                 <span class="text-black text-[10px]">official web :</span> <a href="https://uohyd.ac.in" target="_blank" class="text-blue-600 hover:underline text-[10px]">uohyd.ac.in</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Symbiosis Institute of Business Management (SIBM)</h4>
+<h4 class="text-sm font-semibold mb-1">Symbiosis Institute of Business Management (SIBM)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Hyderabad</p>
                                 <p class="text-[10px]"><strong>Branches Offered:</strong> MBA in Marketing, Finance, Operations, Human Resource Management</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> A part of the prestigious Symbiosis group, known for its quality education and industry-oriented curriculum.</p>
@@ -192,46 +193,46 @@
                             </div>
                         </div>
                     </div>
-<div id="tab-coaching" role="tabpanel" aria-labelledby="tab-coaching-btn" class="" style="display:none">
-                        <h3 class="text-xl font-semibold mb-6">Coaching Centres</h3>
+                    <div id="tab-coaching" role="tabpanel" aria-labelledby="tab-coaching-btn" class="" style="display:none">
+                        <h3 class="text-3xl font-bold mb-6">Coaching Centres</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">TIME (Triumphant Institute of Management Education)</h4>
+<h4 class="text-sm font-semibold mb-1">TIME (Triumphant Institute of Management Education)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Multiple centers across Hyderabad</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> CAT, GRE, GMAT, Bank PO, SSC, and more</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Known for its comprehensive study material, expert faculty, and consistent track record of producing top ranks in various competitive exams.</p>
                                 <span class="text-black text-[10px]">official web :</span> <a href="https://time4education.com" target="_blank" class="text-blue-600 hover:underline text-[10px]">time4education.com</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">IMS Learning Resources</h4>
+<h4 class="text-sm font-semibold mb-1">IMS Learning Resources</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Multiple centers across Hyderabad</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> CAT, GRE, GMAT, CLAT, and other management entrance exams</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> IMS is one of the oldest coaching institutes, providing high-quality preparatory material and a focused approach to cracking competitive exams.</p>
                                 <span class="text-black text-[10px]">official web :</span> <a href="https://imsindia.com" target="_blank" class="text-blue-600 hover:underline text-[10px]">imsindia.com</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Career Launcher (CL)</h4>
+<h4 class="text-sm font-semibold mb-1">Career Launcher (CL)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Multiple centers across Hyderabad</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> CAT, GRE, GMAT, Bank PO, CLAT, and more</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Offers specialized coaching for MBA aspirants with personalized mentorship and mock tests to evaluate progress.</p>
                                 <span class="text-black text-[10px]">official web :</span> <a href="https://careerlauncher.com" target="_blank" class="text-blue-600 hover:underline text-[10px]">careerlauncher.com</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Rao IIT Academy</h4>
+<h4 class="text-sm font-semibold mb-1">Rao IIT Academy</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Ameerpet</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> CAT, GMAT, GRE, IIT-JEE, NEET, and other competitive exams</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Offers highly structured coaching for MBA entrance exams, with a focus on conceptual clarity and test-taking strategies.</p>
                                 <span class="text-black text-[10px]">official web :</span> <a href="https://raoiit.com" target="_blank" class="text-blue-600 hover:underline text-[10px]">raoiit.com</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">Byju's Exam Prep (formerly known as Byju’s Classes)</h4>
+<h4 class="text-sm font-semibold mb-1">Byju's Exam Prep (formerly known as Byju’s Classes)</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Multiple centers across Hyderabad</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> CAT, GRE, GMAT, UPSC, Bank PO, SSC, and more</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Offers a tech-driven approach with a vast library of online resources, interactive learning, and expert-led courses for MBA entrance exams.</p>
                                 <span class="text-black text-[10px]">official web :</span> <a href="https://byjus.com" target="_blank" class="text-blue-600 hover:underline text-[10px]">byjus.com</a>
                             </div>
                             <div class="border rounded-lg p-2 shadow hover:shadow-md transition">
-                                <h4 class="text-xs font-semibold mb-1">CLATapult</h4>
+<h4 class="text-sm font-semibold mb-1">CLATapult</h4>
                                 <p class="text-[10px]"><strong>Location:</strong> Multiple centers across Hyderabad</p>
                                 <p class="text-[10px]"><strong>Courses Offered:</strong> CAT, CLAT, GMAT, GRE, and other management exams</p>
                                 <p class="text-[10px]"><strong>Highlight:</strong> Known for providing a specialized focus on law and management entrance exams, with comprehensive study materials and expert guidance.</p>
@@ -241,10 +242,33 @@
                     </div>
                 </div>
             </div>
-            <script>
+                    <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const tabs = document.querySelectorAll('[role="tab"]');
                     const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+
+                    // Hide all tab panels initially
+                    tabPanels.forEach(panel => {
+                        panel.style.display = 'none';
+                    });
+
+                    // Show the first tab panel
+                    if (tabPanels.length > 0) {
+                        tabPanels[0].style.display = 'block';
+                    }
+
+                    // Set the first tab as selected and styled
+                    tabs.forEach((tab, index) => {
+                        if (index === 0) {
+                            tab.setAttribute('aria-selected', 'true');
+                            tab.classList.add('text-blue-600', 'border-blue-600', 'font-semibold');
+                            tab.classList.remove('text-gray-600');
+                        } else {
+                            tab.setAttribute('aria-selected', 'false');
+                            tab.classList.remove('text-blue-600', 'border-blue-600', 'font-semibold');
+                            tab.classList.add('text-gray-600');
+                        }
+                    });
 
                     tabs.forEach(tab => {
                         tab.addEventListener('click', () => {
@@ -269,18 +293,6 @@
                             document.getElementById(panelId).style.display = 'block';
                         });
                     });
-
-                    // Initialize first tab panel display and first tab button active state
-                    const firstPanel = document.querySelector('[role="tabpanel"]:not([style*="display"])');
-                    if (firstPanel) {
-                        firstPanel.style.display = 'block';
-                    }
-                    const firstTab = document.querySelector('[role="tab"]');
-                    if (firstTab) {
-                        firstTab.setAttribute('aria-selected', 'true');
-                        firstTab.classList.add('text-blue-600', 'border-blue-600', 'font-semibold');
-                        firstTab.classList.remove('text-gray-600');
-                    }
                 });
             </script>
         </section>
