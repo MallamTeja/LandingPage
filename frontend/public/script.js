@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log('Application initialized');
     
     // Example function to fetch data from backend
-    // Set the backend base URL here. Update this to your deployed backend URL.
-    const BACKEND_BASE_URL = 'http://localhost:3000';
+    // Use environment variable for backend base URL, fallback to localhost
+    const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_BASE_URL || 'http://localhost:3000';
 
     async function fetchDataFromBackend() {
         try {

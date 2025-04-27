@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Static files (if needed)
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, '../frontend/public')));
 
 // Routes
 app.use('/api', apiRoutes);
@@ -40,7 +40,7 @@ app.get('/test', (req, res) => {
 
 // Default route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/landing.html'));
+    res.sendFile(path.join(__dirname, '../frontend/public/index.html'));
 });
 
 // Handle 404 errors
