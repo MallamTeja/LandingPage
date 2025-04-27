@@ -75,6 +75,95 @@ router.get('/users/:id', async (req, res) => {
     }
 });
 
+const bcrypt = require('bcrypt');
+
 // Additional routes can be added here
+
+// POST /login - authenticate user
+router.post('/login', async (req, res) => {
+    try {
+        const { usernameOrEmail, password } = req.body;
+
+        if (!usernameOrEmail || !password) {
+            return res.status(400).json({ message: 'Username/email and password are required' });
+        }
+
+        // Find user by username or email
+        const user = await User.findOne({
+            $or: [
+                { username: usernameOrEmail },
+                { email: usernameOrEmail.toLowerCase() }
+            ]
+        });
+
+        if (!user) {
+            return res.status(401).json({ message: 'Invalid username/email or password' });
+        }
+
+        // Check password
+        const isMatch = await user.comparePassword(password);
+        if (!isMatch) {
+            return res.status(401).json({ message: 'Invalid username/email or password' });
+        }
+
+        // Authentication successful
+        res.json({
+            message: 'Login successful',
+            user: {
+                id: user._id,
+                username: user.username,
+                email: user.email,
+                firstName: user.firstName,
+                lastName: user.lastName
+            }
+        });
+    } catch (error) {
+        res.status(500).json({ message: 'Error during login', error: error.message });
+    }
+});
+
+// POST /records - create a new record
+const Record = require('../models/Record');
+
+router.post('/records', async (req, res) => {
+    try {
+        const { name, email, phone, category } = req.body;
+
+        console.log('Received record data:', { name, email, phone, category });
+
+        if (!name || !category) {
+            return res.status(400).json({ message: 'Name and category are required' });
+        }
+
+        // Create new record
+        const newRecord = new Record({
+            name,
+            email: email || undefined, // set undefined if not provided
+            phone: phone || '',
+            category
+        });
+
+        const savedRecord = await newRecord.save();
+
+        console.log('Record saved:', savedRecord);
+
+        res.status(201).json({
+            message: 'Record created successfully',
+            record: savedRecord
+        });
+    } catch (error) {
+        console.error('Error creating record:', error);
+        let errorMessage = 'Error creating record';
+        if (error.name === 'ValidationError') {
+            errorMessage = Object.values(error.errors).map(e => e.message).join('; ');
+        } else if (error.message) {
+            errorMessage = error.message;
+        }
+        res.status(500).json({
+            message: errorMessage,
+            error: error
+        });
+    }
+});
 
 module.exports = router;

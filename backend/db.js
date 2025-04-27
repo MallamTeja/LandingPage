@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 // Database connection URI - replace with your actual MongoDB URI or use environment variable

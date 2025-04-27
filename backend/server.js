@@ -1,7 +1,19 @@
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const db = require('./db');
+
+// Log mongoose connection events
+db.connection.on('connected', () => {
+    console.log('Mongoose connected to DB (from server.js)');
+});
+db.connection.on('error', (err) => {
+    console.error('Mongoose connection error (from server.js):', err);
+});
+db.connection.on('disconnected', () => {
+    console.log('Mongoose disconnected (from server.js)');
+});
 
 // Import routes
 const apiRoutes = require('./routes/api');
