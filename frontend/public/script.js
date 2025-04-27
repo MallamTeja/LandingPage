@@ -44,6 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (response.ok) {
                     // Change button text to show success message
                     submitBtn.textContent = 'Submitted Successfully';
+                    // Redirect to home page after 1 second
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 1000);
                 } else {
                     // Handle error response
                     submitBtn.disabled = false;
