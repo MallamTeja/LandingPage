@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Collect form data
             const formData = {
+                username: document.getElementById('email').value.trim(), // Use email as username
                 firstName: document.getElementById('firstName').value.trim(),
                 lastName: document.getElementById('lastName').value.trim(),
                 email: document.getElementById('email').value.trim(),
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 // Send form data to backend (adjust URL and method as needed)
-                const response = await fetch(`${BACKEND_BASE_URL}/api/signup`, {
+                const response = await fetch(`${BACKEND_BASE_URL}/api/users`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -71,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clarityForm.addEventListener('submit', async (event) => {
             console.log("Landing form submitted");
             event.preventDefault();
+            event.stopPropagation();
 
             // Clear previous error message
             errorMessageElem.textContent = '';
@@ -99,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const response = await fetch('/api/records', {
+                const response = await fetch(`${BACKEND_BASE_URL}/api/records`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

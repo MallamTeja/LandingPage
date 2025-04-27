@@ -192,36 +192,31 @@ html, body {
 /* Remove flex-grow from main */
 main {
   flex-grow: 0;
-  padding-bottom: 60px; /* space for footer height */
+  padding-bottom: 0;
 }
 
 /* Sticky footer styles */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   background-color: #1a202c; /* dark background (Tailwind's blue-900) */
   color: white;
-  padding: 10px 20px;
-  height: 40px;
-  z-index: 1000;
+  padding: 20px;
   box-sizing: border-box;
-  transition: all 0.3s ease;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.75rem;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 20px;
 }
 
 footer p {
   margin: 0;
   text-align: left;
-  flex: 1;
+  /* flex: 1; */
 }
 
 footer > div:first-child {
-  order: 2;
+  /* order: 2; */
   display: flex;
   align-items: center;
   gap: 10px;
