@@ -50,7 +50,7 @@
                     if (response.ok) {
                         showMessage('Login successful! Welcome, ' + (data.user.firstName || data.user.username) + '.', false);
                         setTimeout(() => {
-                            window.location.href = 'landing.html';
+                            window.location.href = 'index.html';
                         }, 1000);
                     } else {
                         if (response.status === 401) {
@@ -68,7 +68,7 @@
             Don't have an account? <a href="signup.html" class="text-blue-600 hover:underline">Sign Up</a>
         </p>
         <p class="mt-2 text-center text-sm">
-            <a href="landing.html" class="text-gray-600 hover:underline">Back to Home</a>
+            <a href="index.html" class="text-gray-600 hover:underline">Back to Home</a>
         </p>
     </div>
 </body>
