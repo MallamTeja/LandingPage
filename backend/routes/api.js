@@ -25,6 +25,7 @@ router.post('/users', async (req, res) => {
         
         console.log('Received user data:', { username, email, firstName, lastName });
 
+        
         // Create new user
         const newUser = new User({
             username,
