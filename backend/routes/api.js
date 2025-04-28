@@ -23,6 +23,9 @@ router.post('/users', async (req, res) => {
     try {
         const { username, email, password, firstName, lastName } = req.body;
         
+        console.log('Received user data:', { username, email, firstName, lastName });
+
+        
         // Create new user
         const newUser = new User({
             username,
@@ -38,6 +41,8 @@ router.post('/users', async (req, res) => {
         // Don't return the password in the response
         savedUser.password = undefined;
         
+        console.log('User saved:', savedUser);
+
         res.status(201).json({
             message: 'User created successfully',
             user: savedUser
@@ -45,11 +50,13 @@ router.post('/users', async (req, res) => {
     } catch (error) {
         // Handle duplicate key errors
         if (error.code === 11000) {
+            console.log('Duplicate user error:', error);
             return res.status(400).json({ 
                 message: 'User already exists with that username or email' 
             });
         }
         
+        console.error('Error creating user:', error);
         res.status(500).json({ 
             message: 'Error creating user', 
             error: error.message 
@@ -132,6 +139,7 @@ router.post('/records', async (req, res) => {
         console.log('Received record data:', { name, email, phone, category });
 
         if (!name || !category) {
+            console.log('Validation failed: Name and category are required');
             return res.status(400).json({ message: 'Name and category are required' });
         }
 
