@@ -40,22 +40,7 @@ app.get('/test', (req, res) => {
 
 // Default route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/public/LandingPage.html'));
-});
-
-// New route for Landingpage without space in URL
-app.get('/Landingpage', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/public/Landing page/index.html'));
-});
-
-// New route for signup without .html extension
-app.get('/signup', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/public/signup.html'));
-});
-
-// New route for login without .html extension
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/public/login.html'));
+    res.sendFile(path.join(__dirname, '../frontend/public/index.html'));
 });
 
 // Handle 404 errors
